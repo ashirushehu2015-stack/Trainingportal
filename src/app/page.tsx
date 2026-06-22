@@ -35,8 +35,10 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Track 1 */}
           <div className="glass rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 shadow-xl border-t-4 border-t-indigo-500 flex flex-col">
-            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-              <MonitorSmartphone className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+            <div 
+              className="w-full h-64 bg-slate-200 dark:bg-slate-800 rounded-2xl mb-6 shadow-md overflow-hidden bg-no-repeat transition-all duration-300 hover:scale-105"
+              style={{ backgroundImage: 'url(/tracks.jpg)', backgroundSize: '300% auto', backgroundPosition: 'left top' }}
+            >
             </div>
             <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">E-Commerce & Digital Marketing</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-6 text-sm">
@@ -58,8 +60,10 @@ export default function Home() {
 
           {/* Track 2 */}
           <div className="glass rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 shadow-xl border-t-4 border-t-pink-500 flex flex-col">
-            <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/50 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-              <PenTool className="w-8 h-8 text-pink-600 dark:text-pink-400" />
+            <div 
+              className="w-full h-64 bg-slate-200 dark:bg-slate-800 rounded-2xl mb-6 shadow-md overflow-hidden bg-no-repeat transition-all duration-300 hover:scale-105"
+              style={{ backgroundImage: 'url(/tracks.jpg)', backgroundSize: '300% auto', backgroundPosition: 'center top' }}
+            >
             </div>
             <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Creative Tech & Gig Work</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-6 text-sm">
@@ -81,8 +85,10 @@ export default function Home() {
 
           {/* Track 3 */}
           <div className="glass rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 shadow-xl border-t-4 border-t-purple-500 flex flex-col">
-            <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-              <GraduationCap className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+            <div 
+              className="w-full h-64 bg-slate-200 dark:bg-slate-800 rounded-2xl mb-6 shadow-md overflow-hidden bg-no-repeat transition-all duration-300 hover:scale-105"
+              style={{ backgroundImage: 'url(/tracks.jpg)', backgroundSize: '300% auto', backgroundPosition: 'right top' }}
+            >
             </div>
             <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Digital Civil Service</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-6 text-sm">
