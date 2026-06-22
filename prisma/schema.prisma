@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Applicant {
+  id                      String   @id @default(uuid())
+  createdAt               DateTime @default(now())
+
+  // Mandatory
+  fullName                String
+  nin                     String   @unique
+  age                     Int
+  email                   String   @unique
+  phone                   String
+  stateOfOrigin           String
+  lga                     String
+  indigeneCertificateUrl  String
+  passportPhotographUrl   String
+  
+  // Track selected: "ecommerce", "creative", "civil_service"
+  track                   String
+
+  // Track 1: E-Commerce
+  isActiveBusinessOwner   Boolean?
+  hasBasicLiteracy        Boolean?
+  hasSmartphone           Boolean?
+  hasWhatsApp             Boolean?
+  hasInternet             Boolean?
+
+  // Track 2: Creative Tech
+  tertiaryQualification   String?  // Degree, HND, Diploma
+  canCommunicateClearly   Boolean?
+  hasLaptop               Boolean?
+  hasComputerLiteracy     Boolean?
+
+  // Track 3: Civil Service
+  isConfirmedCivilServant Boolean?
+  approvalLetterUrl       String?
+  hasOfficeComputerAccess Boolean?
+  hasMsOfficeKnowledge    Boolean?
+}
